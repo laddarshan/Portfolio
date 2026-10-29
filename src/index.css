@@ -1,0 +1,26 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; font-size: 17px; }
+@media (min-width:1024px){ html { font-size: 17px; } }
+@media (min-width:1536px){ html { font-size: 18px; } }
+body { font-family: 'Poppins', sans-serif; @apply bg-slate-50 text-slate-900 dark:bg-canvas dark:text-slate-100; }
+.glass { @apply bg-white border border-blue-200 dark:bg-[#00006B] dark:border-blue-500/40 rounded-2xl shadow-sm transition; }
+.glass:hover { box-shadow: 0 0 20px rgba(0,0,255,0.4); }
+.grad-text { background: linear-gradient(90deg,#3B82F6,#0000FF,#8b5cf6,#3B82F6); background-size: 300%; -webkit-background-clip: text; color: transparent; animation: shift 6s linear infinite; }
+@keyframes shift { to { background-position: 300% 0; } }
+.section { @apply px-6 md:px-16 py-16 max-w-[1600px] mx-auto; }
+.title { @apply text-4xl md:text-5xl font-semibold text-center mb-12 text-[#00008E] dark:text-white; }
+
+a:active, button:active { transform: scale(.95); }
+.glass:hover { transform: translateY(-4px); }
+.ripple { position: fixed; width: 20px; height: 20px; margin: -10px; border-radius: 50%; background: rgba(59,130,246,.6); pointer-events: none; z-index: 300; animation: rip .6s ease-out forwards; }
+@keyframes rip { to { transform: scale(10); opacity: 0; } }
+
+.bg-s1 { background: linear-gradient(135deg,#eff6ff,#bfdbfe); } .dark .bg-s1 { background: linear-gradient(135deg,#000039 0%,#000080 100%); }
+.bg-s2 { background: linear-gradient(180deg,#f8fafc,#dbeafe); } .dark .bg-s2 { background: linear-gradient(180deg,#000000 0%,#00003a 100%); }
+.bg-s3 { background: radial-gradient(circle at 15% 20%,#bfdbfe,#f1f5f9); } .dark .bg-s3 { background: radial-gradient(circle at 15% 20%,#0000c8 0%,#000039 45%,#000000 100%); }
+.bg-s4 { background: linear-gradient(160deg,#e0f2fe,#eff6ff); } .dark .bg-s4 { background: linear-gradient(160deg,#00002b,#00007a 60%,#000026); }
+.bg-s5 { background: linear-gradient(180deg,#dbeafe,#f8fafc); } .dark .bg-s5 { background: linear-gradient(180deg,#00003a,#000000); }
+.bg-s6 { background: radial-gradient(circle at 85% 15%,#bfdbfe,#f1f5f9); } .dark .bg-s6 { background: radial-gradient(circle at 85% 15%,#0000b4 0%,#00002f 50%,#000000 100%); }
+.bg-s7 { background: #0b1220; } .dark .bg-s7 { background: #000000; }
+.bg-s8 { background: linear-gradient(200deg,#dbeafe,#eff6ff); } .dark .bg-s8 { background: linear-gradient(200deg,#000070,#000020 70%,#000000); }
+.bg-s1,.bg-s2,.bg-s3,.bg-s4,.bg-s5,.bg-s6,.bg-s8 { transition: background .6s; }
